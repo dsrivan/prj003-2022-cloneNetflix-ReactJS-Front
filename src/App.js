@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import getHomeList from './Tmdb/Tmdb';
 import './App.css';
 
+import getHomeList from './Tmdb/Tmdb';
+
 import MovieRow from './components/MovieRow';
+import FeatureMovie from './components/FeatureMovie';
 
 function App() {
 
   const [movieList, setMovieList] = useState([]);
+  const [featureData, setFeatureData] = useState(null);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -19,6 +22,10 @@ function App() {
   return (
     <>
       <div className="page">
+
+        {featureData &&
+          <FeatureMovie item={featureData} />
+        }
         <div className="lists">
           {movieList.map((movie, key) => (
             <div>

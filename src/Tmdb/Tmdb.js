@@ -1,7 +1,7 @@
 let availableLanguages = ['en', 'pt-BR'];
 let selectedLanguage = availableLanguages[1];
 
-const URL_COMPLEMENT = `language=${selectedLanguage}&process.env.REACT_APP_API_KEY=${process.env.REACT_APP_API_KEY}`;
+const URL_COMPLEMENT = `language=${selectedLanguage}&api_key=${process.env.REACT_APP_API_KEY}`;
 
 const objUrls = {
     "originals": `${process.env.REACT_APP_API_BASE}/discover/tv?with_network=213&${URL_COMPLEMENT}`,

@@ -1,6 +1,9 @@
 import React from "react";
 import './styles.css';
 
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import InfoIcon from '@material-ui/icons/Info';
+
 const FeaturedMovie = ({ movie: item }) => {
     const IMG_BACKDROP_PATH = process.env.REACT_APP_IMG_BACKDROP_PATH;
 
@@ -42,8 +45,14 @@ const FeaturedMovie = ({ movie: item }) => {
                     </div>
                     <div className="featured--description">{txtOverview}</div>
                     <div className="featured--buttons">
-                        <a href="/" className="featured--play">Assistir</a>
-                        <a href="/" className="featured--moreInfo">Mais informações</a>
+                        <a href="/" className="featured--play">
+                            <PlayArrowIcon className="icon" />
+                            Assistir
+                        </a>
+                        <a href="/" className="featured--moreInfo">
+                            <InfoIcon className="icon" />
+                            Mais informações
+                        </a>
                     </div>
                     <div className="featured--genres">
                         <strong>{genres}</strong>

@@ -1,0 +1,26 @@
+.loader--out {
+  background-color: #111;
+  width: 100%;
+  height: 100vh;
+  /* z-index: 1000; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader {
+  animation: loader-spin 1.1s linear infinite, 1 !important;
+  -webkit-animation: loader-spin 1.1s linear infinite, 1 !important;
+}
+@keyframes loader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loader-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}

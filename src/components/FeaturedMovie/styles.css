@@ -49,7 +49,7 @@
 }
 .featured--play,
 .featured--moreInfo {
-  display: inline-block;
+  display: inline-flex;
   font-size: 20px;
   font-weight: bold;
   padding: 12px 25px;
@@ -57,24 +57,20 @@
   text-decoration: none;
   margin-right: 10px;
   transition: all 0.1s ease;
+  align-items: center;
+}
+.featured--play > .icon,
+.featured--moreInfo > .icon {
+  margin-right: 10px;
+  font-size: 30px;
 }
 .featured--play {
   background-color: #fff;
   color: #000;
 }
-.featured--play:before {
-  content: "\25BA";
-  margin-right: 10px;
-  font-size: 24px;
-}
 .featured--moreInfo {
   background-color: #333;
   color: #fff;
-}
-.featured--moreInfo:before {
-  margin-right: 10px;
-  content: "\24D8";
-  font-size: 20px;
 }
 .featured--play:hover,
 .featured--moreInfo:hover {

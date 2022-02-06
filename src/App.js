@@ -5,11 +5,14 @@ import { getHomeList, getMovieInfo } from './Tmdb/Tmdb';
 
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
 
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -35,12 +38,23 @@ function App() {
     loadAll();
   }, []);
 
+  useEffect(() => {
+    const scrollListener = () => setBlackHeader((window.scrollY > 50) ? true : false);
+
+    window.addEventListener('scroll', scrollListener);
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
+
+  }, []);
+
   return (
     <div className="page">
-      {
-        featuredData &&
-        <FeaturedMovie movie={featuredData} />
-      }
+
+      <Header black={blackHeader} />
+
+      {featuredData && <FeaturedMovie movie={featuredData} />}
+
       <div className="lists">
         {movieList.map((movie, key) => (
           <MovieRow
@@ -50,6 +64,9 @@ function App() {
           />
         ))}
       </div>
+
+      <Footer />
+
     </div>
   );
 }

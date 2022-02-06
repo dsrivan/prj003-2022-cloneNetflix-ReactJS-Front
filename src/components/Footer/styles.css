@@ -1,0 +1,13 @@
+footer {
+  text-align: center;
+  margin: 50px 0;
+}
+footer p {
+  margin: 5px;
+  display: block;
+}
+footer p a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}

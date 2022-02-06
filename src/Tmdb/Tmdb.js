@@ -15,13 +15,29 @@ const objUrls = {
     "animation": `${process.env.REACT_APP_API_BASE}/discover/movie?with_genres=16&${URL_COMPLEMENT}`,
     "sciencefiction": `${process.env.REACT_APP_API_BASE}/discover/movie?with_genres=878&${URL_COMPLEMENT}`,
     "mystery": `${process.env.REACT_APP_API_BASE}/discover/movie?with_genres=9648&${URL_COMPLEMENT}`,
-    "war": `${process.env.REACT_APP_API_BASE}/discover/movie?with_genres=10752&${URL_COMPLEMENT}`
+    "war": `${process.env.REACT_APP_API_BASE}/discover/movie?with_genres=10752&${URL_COMPLEMENT}`,
+    "movieInfo": `${process.env.REACT_APP_API_BASE}/@type/@movieId?${URL_COMPLEMENT}`
 }
 
 const basicFetch = async (endpoint) => {
     const req = await fetch(endpoint);
     const json = await req.json();
     return json;
+}
+
+const getMovieInfo = async (movieId = 1, type = "movie") => {
+    let info = {};
+
+    if (movieId) {
+        let { movieInfo } = objUrls;
+
+        movieInfo = movieInfo.replace("@type", type);
+        movieInfo = movieInfo.replace("@movieId", movieId);
+
+        info = await basicFetch(movieInfo);
+    }
+
+    return info;
 }
 
 const getHomeList = async () => {
@@ -89,4 +105,4 @@ const getHomeList = async () => {
     ];
 }
 
-export default getHomeList;
+export { getHomeList, getMovieInfo };

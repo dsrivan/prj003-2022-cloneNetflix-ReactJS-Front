@@ -13,18 +13,88 @@ header {
   transition: all 0.3s ease;
 }
 header.isBlack {
-  background-color: #141414;
+  background-color: rgb(20, 20, 20);
 }
 .header--logo {
   height: 25px;
+  display: flex;
 }
 .header--logo img {
   height: 100%;
 }
-.header--user {
+.header--user-ul {
   height: 35px;
 }
-.header--user img {
+.header--user-ul img {
   height: 100%;
   border-radius: 3px;
+}
+.header--logo-ul.isOpened {
+  margin-left: 0;
+}
+.header--logo-ul,
+.header--user-ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.header--logo-ul li:first-child {
+  display: none;
+}
+.header--logo-ul li:first-child img {
+  width: 100px;
+}
+.header--user-ul li {
+  cursor: pointer;
+}
+.header--logo-ul li:not(:last-child),
+.header--user-ul li:not(:last-child) {
+  margin-right: 20px;
+}
+.header--user-ul li {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: none !important;
+  margin-left: 15px;
+}
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+/* Responsividade */
+@media (max-width: 820px) {
+  .menu {
+    display: block !important;
+  }
+  .header--logo-ul li:first-child {
+    display: block;
+  }
+  .header--logo-ul {
+    margin-left: -120%;
+  }
+  .header--user-ul li:nth-child(2) {
+    display: none;
+  }
+  .header--logo-ul {
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    padding: 50px 0;
+    background-color: #111;
+    top: 0;
+    left: 0;
+  }
+  .header--logo-ul li {
+    margin: 15px 0 !important;
+    font-size: 16px;
+  }
+  .header--user-ul li:not(:last-child) {
+    margin-right: 5px;
+  }
 }

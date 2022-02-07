@@ -18,7 +18,7 @@ const FeaturedMovie = ({ movie: item }) => {
 
     const txtAverage = `${iAverage} pontos`;
     const txtQtSeasons = `${iSeasons} temporada${((iSeasons > 1) ? "s" : "")}`;
-    const txtOverview = (iOverview.length > 130) ? `${iOverview.slice(0, 130)}...` : iOverview;
+    const txtOverview = (iOverview.length > 130) ? `${iOverview.substring(0, 130)}...` : iOverview;
 
     let txtDate = new Date(iDate);
     txtDate = txtDate.getFullYear()

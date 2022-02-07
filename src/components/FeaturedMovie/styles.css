@@ -7,10 +7,10 @@
   height: inherit;
 }
 .featured--vertical {
-  background: linear-gradient(to top, #111 10%, transparent 90%);
+  background: linear-gradient(to top, #111 15%, transparent 85%);
 }
 .featured--horizontal {
-  background: linear-gradient(to right, #111 30%, transparent 70%);
+  background: linear-gradient(to right, #111 2%, transparent 98%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,4 +80,37 @@
   margin-top: 15px;
   font-size: 18px;
   color: #999;
+}
+/* Responsividade */
+@media (max-width: 320px) {
+  .featured--play,
+  .featured--moreInfo {
+    width: calc(100% - 30px);
+    justify-content: center;
+  }
+}
+@media (max-width: 760px) {
+  .featured {
+    height: 90vh;
+  }
+  .featured--name {
+    font-size: 40px;
+  }
+  .featured--info {
+    font-size: 16px;
+  }
+  .featured--description {
+    font-size: 14px;
+    max-width: 100%;
+    margin-right: 30px;
+  }
+  .featured--play,
+  .featured--moreInfo {
+    font-size: 16px;
+    padding: 8px 11px;
+    margin-bottom: 10px;
+  }
+  .featured--genres {
+    font-size: 14px;
+  }
 }

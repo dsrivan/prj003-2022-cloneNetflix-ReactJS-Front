@@ -19,6 +19,9 @@ header.isBlack {
   height: 25px;
   display: flex;
 }
+.header--logo a {
+  display: contents;
+}
 .header--logo img {
   height: 100%;
 }

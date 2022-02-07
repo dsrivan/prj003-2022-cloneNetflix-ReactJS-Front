@@ -60,6 +60,7 @@ header.isBlack {
 .menu {
   display: none !important;
   margin-left: 15px;
+  cursor: pointer;
 }
 .close {
   position: absolute;

@@ -52,12 +52,12 @@ const Header = ({ black }) => {
                     <li>
                         <NotificationsIcon />
                     </li>
-                    <li>
+                    <li className="header--user--icon">
                         <img
                             src={Usuario}
                             alt="Imagem usuário"
                         />
-                        <ArrowDropDownIcon />
+                        <ArrowDropDownIcon className="icon-down" />
                     </li>
                 </ul>
             </div>

@@ -1,6 +1,6 @@
 ## Clone Netflix
 
-*página em construção*
+_página em construção_
 
 ### Ferramentas externas
 

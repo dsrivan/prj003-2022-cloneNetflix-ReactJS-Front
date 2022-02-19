@@ -1,18 +1,18 @@
-# Clone Netflix
+# Netflix Clone
 
 > Scroll for description and demonstrations
 
 &nbsp;
 
+_Note: This develop was to a frontend bootcamp. Due to the short time, was used components and raw html tags. In future refactoring will be used only components with styled components._
+
+&nbsp;
+
 ### Description
 
-#### This development is
-
-`<coming soon>`
-
-#### The intention of this development was:
-
-`<coming soon>`
+<div style="background-color: #161b22; padding: 20px; border-radius: 4px">
+The intention of this development is make a <strong style="color: #e50914;">NETFLIX</strong> clone using React JS
+</div>
 
 &nbsp;
 
@@ -39,8 +39,15 @@
 &nbsp;
 &nbsp;
 
-### Ferramentas externas
+### External tools and license
 
-- [The Movie Database]
+- Data from The Movie Database [TMDB]
+- Image rights for [Netflix]
 
-[the movie database]: https://www.themoviedb.org
+&nbsp;
+
+_Talk to me on [LinkedIn]_
+
+[netflix]: https://www.netflix.com/
+[tmdb]: https://www.themoviedb.org
+[linkedin]: https://www.linkedin.com/in/dsrivan/
